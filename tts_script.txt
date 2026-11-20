@@ -1,0 +1,54 @@
+MEDISCAN DEMO VIDEO SCRIPT (Target Length: ~3-4 minutes)
+
+[0:00 - 0:30] SCENE 1: THE PROBLEM & INTRODUCTION
+(Visual: High-contrast, large text title "MediScan". Show a brief close-up of a real, blurry prescription bottle with confusing abbreviations like "Take 1 tab PO QD PRN".)
+
+NARRATOR / PRESENTER:
+"Every day, millions of patients leave pharmacies holding medicine bottles with instructions they can't understand. Medical abbreviations like 'PO', 'QD', or 'PRN', tiny fonts, and complex medical jargon lead to dangerous dosage errors and missed medications—especially for seniors and non-native English speakers. Health literacy is a massive problem. 
+
+Introducing MediScan: a simple, accessible web app that translates complex prescription labels into plain, simple 5th-grade English."
+
+--------------------------------------------------
+
+[0:30 - 1:30] SCENE 2: LIVE DEMO & OVERVIEW
+(Visual: Screen capture of the MediScan app interface. Point out the simple design, upload box, and clear buttons.)
+
+NARRATOR / PRESENTER:
+"Let's see MediScan in action. 
+
+We designed the user interface with absolute simplicity and accessibility in mind—featuring large high-contrast fonts, clean layouts, and simple actions. 
+
+I'll start by uploading a photo of a real medication label. I simply drag and drop the image into the uploader. Notice how the image preview appears instantly right on the screen so the user can verify they've uploaded the correct bottle."
+
+--------------------------------------------------
+
+[1:30 - 3:00] SCENE 3: SCANNING AND AI STREAMING
+(Visual: Click the "Scan and Translate" button. Show the spinner, followed by the extracted raw text appearing, and then the Gemini response streaming real-time into the simplified text box.)
+
+NARRATOR / PRESENTER:
+"Now, I click 'Scan and Translate'. 
+
+Behind the scenes, MediScan runs an advanced computer vision pipeline powered by OpenCV and EasyOCR. The image is automatically deskewed, upscaled, denoised, and sharpened to guarantee high accuracy—even for poor lighting or thermal receipt paper. 
+
+Here, you can see the raw text detected from the bottle: 'Take 1 tab PO QD PRN for pain'. 
+
+Immediately below, MediScan sends this text to Google's Gemini 1.5 Flash model with a custom medical prompt. Watch as the response streams in real time! 
+
+Gemini instantly translates the confusing jargon into plain English: 
+'Take 1 pill by mouth every day as needed for pain.' 
+
+Notice how fast and easy that was. No medical degree required!"
+
+--------------------------------------------------
+
+[3:00 - 4:00] SCENE 4: PRIVACY, ERROR HANDLING & CONCLUSION
+(Visual: Show a quick glimpse of error handling, e.g., missing API key warning or low quality image warning. End with a slide or screen showing the project repo/README.)
+
+NARRATOR / PRESENTER:
+"Accessibility and privacy were our top priorities. MediScan process images in isolated, ephemeral user sessions using UUIDs—meaning your uploaded photos are never saved, stored, or shared with anyone else. 
+
+If an image is unreadable or if there's a system error, MediScan gives friendly, real-time feedback so the user always knows what to do next.
+
+By combining low-level image processing with state-of-the-art LLMs, MediScan empowers patients, family caregivers, and seniors to take control of their health safely. 
+
+Thank you for watching our demo!"
