@@ -1,11 +1,25 @@
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.x-red.svg)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 # MediScan
 
 MediScan is an application designed to bridge the health literacy gap by simplifying complex medication labels and guides.
 
+
+## Features
+- **Intelligent OCR**: Extracts text from images of prescription bottles and medication labels with high accuracy.
+- **AI-Powered Simplification**: Translates complex medical jargon into 5th-grade level English using Google Gemini 1.5 Flash.
+- **Accessible UI**: Built with Streamlit for a simple, intuitive user experience.
+- **Real-time Processing**: Streamed AI responses allow users to read the simplified instructions as they are generated.
+- **Robust Error Handling**: Handles image upload issues, OCR failures, and API constraints gracefully.
+
 ## How it works
 1. **Upload**: Users take a photo or upload an image of a prescription bottle or medication guide.
-2. **OCR**: The app uses `EasyOCR` to extract text from the image.
-3. **Translation**: The extracted text is sent to an LLM (Google Gemini) with a prompt designed to translate medical jargon into plain, 5th-grade level English.
+2. **Preprocessing**: The image is processed using `OpenCV` to enhance text readability for OCR.
+3. **OCR**: The app uses `EasyOCR` to extract text from the image.
+4. **Translation**: The extracted text is sent to an LLM (Google Gemini) with a prompt designed to translate medical jargon into plain, 5th-grade level English.
 
 
 ## Installation
